@@ -1,0 +1,731 @@
+{
+  "evidenceVersion": "cass-decision-note-evidence/v1",
+  "noteId": "cass-eval-repair",
+  "revision": "r1",
+  "metric": "nDCG@10",
+  "candidates": [
+    {
+      "id": "candidate-a",
+      "labelAtEvaluation": "bench-embed-qwen3-4b"
+    },
+    {
+      "id": "candidate-b",
+      "labelAtEvaluation": "local-embed"
+    }
+  ],
+  "method": {
+    "pairing": "same retained evaluation query; source identifiers removed",
+    "ordering": "ascending candidate-a score, then candidate-b score; duplicate score pairs preserved",
+    "correctedAggregation": "arithmetic mean over retained paired scores",
+    "interval": {
+      "kind": "paired-percentile-bootstrap",
+      "generator": "lcg32: state=(1664525*state+1013904223) modulo 2^32; draw=floor(state/2^32*pairCount)",
+      "seed": 20260907,
+      "resamples": 10000,
+      "confidenceLevel": 0.95,
+      "percentileRule": "nearest-rank values at 2.5% and 97.5% from sorted bootstrap mean gaps"
+    }
+  },
+  "pairs": [
+    {
+      "pair": "pair-001",
+      "candidateAScore": 0,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-002",
+      "candidateAScore": 0,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-003",
+      "candidateAScore": 0,
+      "candidateBScore": 0.17376534287144002
+    },
+    {
+      "pair": "pair-004",
+      "candidateAScore": 0,
+      "candidateBScore": 0.17376534287144002
+    },
+    {
+      "pair": "pair-005",
+      "candidateAScore": 0,
+      "candidateBScore": 0.2017302116098349
+    },
+    {
+      "pair": "pair-006",
+      "candidateAScore": 0,
+      "candidateBScore": 0.43562219203501285
+    },
+    {
+      "pair": "pair-007",
+      "candidateAScore": 0,
+      "candidateBScore": 0.4671445995090871
+    },
+    {
+      "pair": "pair-008",
+      "candidateAScore": 0,
+      "candidateBScore": 0.48859926709880575
+    },
+    {
+      "pair": "pair-009",
+      "candidateAScore": 0,
+      "candidateBScore": 0.5417852098764684
+    },
+    {
+      "pair": "pair-010",
+      "candidateAScore": 0,
+      "candidateBScore": 0.6131471927654584
+    },
+    {
+      "pair": "pair-011",
+      "candidateAScore": 0,
+      "candidateBScore": 0.7726992603282005
+    },
+    {
+      "pair": "pair-012",
+      "candidateAScore": 0,
+      "candidateBScore": 0.7801703650555569
+    },
+    {
+      "pair": "pair-013",
+      "candidateAScore": 0.058497534677247845,
+      "candidateBScore": 0.9690945337173088
+    },
+    {
+      "pair": "pair-014",
+      "candidateAScore": 0.06642999534512085,
+      "candidateBScore": 0.9013526671502032
+    },
+    {
+      "pair": "pair-015",
+      "candidateAScore": 0.08398471153179837,
+      "candidateBScore": 0.6110727005222791
+    },
+    {
+      "pair": "pair-016",
+      "candidateAScore": 0.08622930147869444,
+      "candidateBScore": 0.10425656783464912
+    },
+    {
+      "pair": "pair-017",
+      "candidateAScore": 0.09364787839833931,
+      "candidateBScore": 0.08069208464393396
+    },
+    {
+      "pair": "pair-018",
+      "candidateAScore": 0.09425663579170786,
+      "candidateBScore": 0.3657020843647688
+    },
+    {
+      "pair": "pair-019",
+      "candidateAScore": 0.10867693441774044,
+      "candidateBScore": 0.9506332534042353
+    },
+    {
+      "pair": "pair-020",
+      "candidateAScore": 0.145447576124317,
+      "candidateBScore": 0.46214057552915455
+    },
+    {
+      "pair": "pair-021",
+      "candidateAScore": 0.14896415437351715,
+      "candidateBScore": 0.3871134697708168
+    },
+    {
+      "pair": "pair-022",
+      "candidateAScore": 0.15273311123869335,
+      "candidateBScore": 0.3812124981123705
+    },
+    {
+      "pair": "pair-023",
+      "candidateAScore": 0.1672471766208644,
+      "candidateBScore": 0.47588565690920626
+    },
+    {
+      "pair": "pair-024",
+      "candidateAScore": 0.18608841418833288,
+      "candidateBScore": 0.5287168210414608
+    },
+    {
+      "pair": "pair-025",
+      "candidateAScore": 0.18725449995343377,
+      "candidateBScore": 0.42732163893382463
+    },
+    {
+      "pair": "pair-026",
+      "candidateAScore": 0.19486128181314627,
+      "candidateBScore": 0.5509033273907399
+    },
+    {
+      "pair": "pair-027",
+      "candidateAScore": 0.19597634758523014,
+      "candidateBScore": 0.4794372170186301
+    },
+    {
+      "pair": "pair-028",
+      "candidateAScore": 0.21468600536424026,
+      "candidateBScore": 0.5158474921363962
+    },
+    {
+      "pair": "pair-029",
+      "candidateAScore": 0.21840743681816419,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-030",
+      "candidateAScore": 0.22854179986184534,
+      "candidateBScore": 0.3937506751234175
+    },
+    {
+      "pair": "pair-031",
+      "candidateAScore": 0.236490496387114,
+      "candidateBScore": 0.5175263720138167
+    },
+    {
+      "pair": "pair-032",
+      "candidateAScore": 0.23692657729106972,
+      "candidateBScore": 0.9897646880920096
+    },
+    {
+      "pair": "pair-033",
+      "candidateAScore": 0.23719771276929622,
+      "candidateBScore": 0.3868528072345416
+    },
+    {
+      "pair": "pair-034",
+      "candidateAScore": 0.24207625393180188,
+      "candidateBScore": 0.10425656783464912
+    },
+    {
+      "pair": "pair-035",
+      "candidateAScore": 0.255152098201746,
+      "candidateBScore": 0.67407837578204
+    },
+    {
+      "pair": "pair-036",
+      "candidateAScore": 0.2562816758908691,
+      "candidateBScore": 0.9520727775370875
+    },
+    {
+      "pair": "pair-037",
+      "candidateAScore": 0.26076124145639246,
+      "candidateBScore": 0.6955660454013768
+    },
+    {
+      "pair": "pair-038",
+      "candidateAScore": 0.27541155237618664,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-039",
+      "candidateAScore": 0.27541155237618664,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-040",
+      "candidateAScore": 0.27541155237618664,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-041",
+      "candidateAScore": 0.30402729049505856,
+      "candidateBScore": 0.0848062679690234
+    },
+    {
+      "pair": "pair-042",
+      "candidateAScore": 0.3045533669257785,
+      "candidateBScore": 0.058415118600262037
+    },
+    {
+      "pair": "pair-043",
+      "candidateAScore": 0.3105971876750918,
+      "candidateBScore": 0.19091759427738778
+    },
+    {
+      "pair": "pair-044",
+      "candidateAScore": 0.317080109843069,
+      "candidateBScore": 0.8116258684071461
+    },
+    {
+      "pair": "pair-045",
+      "candidateAScore": 0.32099725115839695,
+      "candidateBScore": 0.21922102252603518
+    },
+    {
+      "pair": "pair-046",
+      "candidateAScore": 0.32261321150873096,
+      "candidateBScore": 0.4484241373478316
+    },
+    {
+      "pair": "pair-047",
+      "candidateAScore": 0.32513538126643604,
+      "candidateBScore": 0.3894896073028865
+    },
+    {
+      "pair": "pair-048",
+      "candidateAScore": 0.3357241323301412,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-049",
+      "candidateAScore": 0.3385445810810093,
+      "candidateBScore": 0.741816725390925
+    },
+    {
+      "pair": "pair-050",
+      "candidateAScore": 0.3475754257528543,
+      "candidateBScore": 0.44892302254687655
+    },
+    {
+      "pair": "pair-051",
+      "candidateAScore": 0.3519909399100463,
+      "candidateBScore": 0.7796624738466157
+    },
+    {
+      "pair": "pair-052",
+      "candidateAScore": 0.35245425111784595,
+      "candidateBScore": 0.5748819500205175
+    },
+    {
+      "pair": "pair-053",
+      "candidateAScore": 0.36402931517008774,
+      "candidateBScore": 0.7977301079849978
+    },
+    {
+      "pair": "pair-054",
+      "candidateAScore": 0.3684816257573202,
+      "candidateBScore": 0.24267069991821946
+    },
+    {
+      "pair": "pair-055",
+      "candidateAScore": 0.37133852434664305,
+      "candidateBScore": 0.331984195328382
+    },
+    {
+      "pair": "pair-056",
+      "candidateAScore": 0.3729233851249795,
+      "candidateBScore": 0.28113656306976176
+    },
+    {
+      "pair": "pair-057",
+      "candidateAScore": 0.3825616703540603,
+      "candidateBScore": 0.34080437206644215
+    },
+    {
+      "pair": "pair-058",
+      "candidateAScore": 0.3883541434041571,
+      "candidateBScore": 0.44974302581883335
+    },
+    {
+      "pair": "pair-059",
+      "candidateAScore": 0.3928824025562048,
+      "candidateBScore": 0.5909066011874029
+    },
+    {
+      "pair": "pair-060",
+      "candidateAScore": 0.39796393375077116,
+      "candidateBScore": 0.14891380939438262
+    },
+    {
+      "pair": "pair-061",
+      "candidateAScore": 0.41363780175807613,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-062",
+      "candidateAScore": 0.43062490815403953,
+      "candidateBScore": 0.2893748770748084
+    },
+    {
+      "pair": "pair-063",
+      "candidateAScore": 0.4316352161242019,
+      "candidateBScore": 0.3298444694085621
+    },
+    {
+      "pair": "pair-064",
+      "candidateAScore": 0.4372246917795296,
+      "candidateBScore": 0.6030572758778099
+    },
+    {
+      "pair": "pair-065",
+      "candidateAScore": 0.43837603455558594,
+      "candidateBScore": 0.5559664780824871
+    },
+    {
+      "pair": "pair-066",
+      "candidateAScore": 0.4486991621148612,
+      "candidateBScore": 0.4635102405703787
+    },
+    {
+      "pair": "pair-067",
+      "candidateAScore": 0.462108546148762,
+      "candidateBScore": 0.3109308687624377
+    },
+    {
+      "pair": "pair-068",
+      "candidateAScore": 0.47109818130261516,
+      "candidateBScore": 0.3867666988248204
+    },
+    {
+      "pair": "pair-069",
+      "candidateAScore": 0.4753201476047242,
+      "candidateBScore": 0.5459335943546914
+    },
+    {
+      "pair": "pair-070",
+      "candidateAScore": 0.4781047104328725,
+      "candidateBScore": 0.27033757566317346
+    },
+    {
+      "pair": "pair-071",
+      "candidateAScore": 0.49674701470413135,
+      "candidateBScore": 0.4834689451945314
+    },
+    {
+      "pair": "pair-072",
+      "candidateAScore": 0.4974576951773828,
+      "candidateBScore": 0.38262456913386783
+    },
+    {
+      "pair": "pair-073",
+      "candidateAScore": 0.49944859142881765,
+      "candidateBScore": 0.5061224022210058
+    },
+    {
+      "pair": "pair-074",
+      "candidateAScore": 0.5017281512387066,
+      "candidateBScore": 0.24828935880114408
+    },
+    {
+      "pair": "pair-075",
+      "candidateAScore": 0.5041496164870385,
+      "candidateBScore": 0.24153350098894139
+    },
+    {
+      "pair": "pair-076",
+      "candidateAScore": 0.5267210703818528,
+      "candidateBScore": 0.5564595202779334
+    },
+    {
+      "pair": "pair-077",
+      "candidateAScore": 0.5269384619628811,
+      "candidateBScore": 0.6704673354890989
+    },
+    {
+      "pair": "pair-078",
+      "candidateAScore": 0.5363781864793108,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-079",
+      "candidateAScore": 0.543030597287109,
+      "candidateBScore": 0.8058978804587239
+    },
+    {
+      "pair": "pair-080",
+      "candidateAScore": 0.5513325622513007,
+      "candidateBScore": 0.6466361685073256
+    },
+    {
+      "pair": "pair-081",
+      "candidateAScore": 0.5619788457376247,
+      "candidateBScore": 0.7318420256082943
+    },
+    {
+      "pair": "pair-082",
+      "candidateAScore": 0.5688738146159665,
+      "candidateBScore": 0.32600593405289774
+    },
+    {
+      "pair": "pair-083",
+      "candidateAScore": 0.5770283724616573,
+      "candidateBScore": 0.9279285208831949
+    },
+    {
+      "pair": "pair-084",
+      "candidateAScore": 0.5833112754435553,
+      "candidateBScore": 0.4086205606568257
+    },
+    {
+      "pair": "pair-085",
+      "candidateAScore": 0.5848442065499243,
+      "candidateBScore": 0.5220113924687534
+    },
+    {
+      "pair": "pair-086",
+      "candidateAScore": 0.5861416313225506,
+      "candidateBScore": 0.2660518084355033
+    },
+    {
+      "pair": "pair-087",
+      "candidateAScore": 0.5942025317647553,
+      "candidateBScore": 0.46608640887265046
+    },
+    {
+      "pair": "pair-088",
+      "candidateAScore": 0.597504736621744,
+      "candidateBScore": 0.6962581312553991
+    },
+    {
+      "pair": "pair-089",
+      "candidateAScore": 0.6097426926720908,
+      "candidateBScore": 0.3652920015579408
+    },
+    {
+      "pair": "pair-090",
+      "candidateAScore": 0.6131471927654584,
+      "candidateBScore": 0.26406812257259094
+    },
+    {
+      "pair": "pair-091",
+      "candidateAScore": 0.6193024025669207,
+      "candidateBScore": 0.7627347915792835
+    },
+    {
+      "pair": "pair-092",
+      "candidateAScore": 0.627750956562343,
+      "candidateBScore": 0.8908509144713884
+    },
+    {
+      "pair": "pair-093",
+      "candidateAScore": 0.6321281964165631,
+      "candidateBScore": 0.459546514424638
+    },
+    {
+      "pair": "pair-094",
+      "candidateAScore": 0.6528389390641586,
+      "candidateBScore": 0.07614376524648808
+    },
+    {
+      "pair": "pair-095",
+      "candidateAScore": 0.6533047940888892,
+      "candidateBScore": 0.7826305590981872
+    },
+    {
+      "pair": "pair-096",
+      "candidateAScore": 0.6594889048333293,
+      "candidateBScore": 0.7349661191051742
+    },
+    {
+      "pair": "pair-097",
+      "candidateAScore": 0.6663573774201548,
+      "candidateBScore": 0.19008028826730944
+    },
+    {
+      "pair": "pair-098",
+      "candidateAScore": 0.6953649312805535,
+      "candidateBScore": 0.36719188858229546
+    },
+    {
+      "pair": "pair-099",
+      "candidateAScore": 0.6984748526973958,
+      "candidateBScore": 0.2787565832328946
+    },
+    {
+      "pair": "pair-100",
+      "candidateAScore": 0.7071247690190714,
+      "candidateBScore": 0.2430058276922926
+    },
+    {
+      "pair": "pair-101",
+      "candidateAScore": 0.7087885048010746,
+      "candidateBScore": 0.8106698559467996
+    },
+    {
+      "pair": "pair-102",
+      "candidateAScore": 0.7236133788604927,
+      "candidateBScore": 0.6377279547533642
+    },
+    {
+      "pair": "pair-103",
+      "candidateAScore": 0.7268751201479756,
+      "candidateBScore": 0.3563924636680156
+    },
+    {
+      "pair": "pair-104",
+      "candidateAScore": 0.7277964085115503,
+      "candidateBScore": 0.18987680314166977
+    },
+    {
+      "pair": "pair-105",
+      "candidateAScore": 0.7342588425875058,
+      "candidateBScore": 0.5050258025096246
+    },
+    {
+      "pair": "pair-106",
+      "candidateAScore": 0.7797925051733758,
+      "candidateBScore": 0.8846149436984407
+    },
+    {
+      "pair": "pair-107",
+      "candidateAScore": 0.7826275386070448,
+      "candidateBScore": 0.7316967532809392
+    },
+    {
+      "pair": "pair-108",
+      "candidateAScore": 0.7826587905652267,
+      "candidateBScore": 0.504738706258641
+    },
+    {
+      "pair": "pair-109",
+      "candidateAScore": 0.7836118074815167,
+      "candidateBScore": 0.7836118074815167
+    },
+    {
+      "pair": "pair-110",
+      "candidateAScore": 0.805574861987417,
+      "candidateBScore": 0.5408380772019036
+    },
+    {
+      "pair": "pair-111",
+      "candidateAScore": 0.819876640193745,
+      "candidateBScore": 0.09364787839833931
+    },
+    {
+      "pair": "pair-112",
+      "candidateAScore": 0.840107411802451,
+      "candidateBScore": 0.8388192362355527
+    },
+    {
+      "pair": "pair-113",
+      "candidateAScore": 0.840417014124717,
+      "candidateBScore": 0.8083397814816321
+    },
+    {
+      "pair": "pair-114",
+      "candidateAScore": 0.850834274847108,
+      "candidateBScore": 0.38130108017580844
+    },
+    {
+      "pair": "pair-115",
+      "candidateAScore": 0.8509220998399223,
+      "candidateBScore": 0.054516992023355706
+    },
+    {
+      "pair": "pair-116",
+      "candidateAScore": 0.8566738699872568,
+      "candidateBScore": 0.650180473951869
+    },
+    {
+      "pair": "pair-117",
+      "candidateAScore": 0.859923329483729,
+      "candidateBScore": 0.40938900557091956
+    },
+    {
+      "pair": "pair-118",
+      "candidateAScore": 0.9111312868325776,
+      "candidateBScore": 0.8608507208033159
+    },
+    {
+      "pair": "pair-119",
+      "candidateAScore": 0.9121811910182115,
+      "candidateBScore": 0.7369542930925169
+    },
+    {
+      "pair": "pair-120",
+      "candidateAScore": 0.9187278297839353,
+      "candidateBScore": 0.8867123360927166
+    },
+    {
+      "pair": "pair-121",
+      "candidateAScore": 0.9243993392689761,
+      "candidateBScore": 0.5319568330839898
+    },
+    {
+      "pair": "pair-122",
+      "candidateAScore": 0.9260446319296772,
+      "candidateBScore": 0.6234997966086261
+    },
+    {
+      "pair": "pair-123",
+      "candidateAScore": 0.9375818333488555,
+      "candidateBScore": 0.7105718236031079
+    },
+    {
+      "pair": "pair-124",
+      "candidateAScore": 0.9430813336649123,
+      "candidateBScore": 0.04707671603920117
+    },
+    {
+      "pair": "pair-125",
+      "candidateAScore": 0.961999147059583,
+      "candidateBScore": 1
+    },
+    {
+      "pair": "pair-126",
+      "candidateAScore": 0.9674679834891694,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-127",
+      "candidateAScore": 0.9684775925259257,
+      "candidateBScore": 0.39482363724951863
+    },
+    {
+      "pair": "pair-128",
+      "candidateAScore": 0.9751957567060058,
+      "candidateBScore": 0.9715787480216234
+    },
+    {
+      "pair": "pair-129",
+      "candidateAScore": 1,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-130",
+      "candidateAScore": 1,
+      "candidateBScore": 0
+    },
+    {
+      "pair": "pair-131",
+      "candidateAScore": 1,
+      "candidateBScore": 0.7653606369886218
+    },
+    {
+      "pair": "pair-132",
+      "candidateAScore": 1,
+      "candidateBScore": 1
+    }
+  ],
+  "recomputedCorrected": {
+    "evidenceStrength": "recomputed-from-retained-paired-scores",
+    "denominator": 132,
+    "candidateAMean": 0.4707060055611849,
+    "candidateBMean": 0.4640440918154661,
+    "meanGapCandidateAMinusB": 0.006661913745718833,
+    "candidateAWins": 67,
+    "candidateALosses": 61,
+    "ties": 4,
+    "meanGap95PercentileBootstrap": {
+      "lower": -0.05633414258029253,
+      "upper": 0.07046689893284708
+    }
+  },
+  "reportedOnly": [
+    {
+      "stage": "original-leaky-single-positive",
+      "evidenceStrength": "reported-only-retained-aggregate",
+      "candidateAMean": 0.5484,
+      "candidateBMean": 0.4709,
+      "meanGapCandidateAMinusB": 0.0775,
+      "reportedInference": "advantage-reported-significant"
+    },
+    {
+      "stage": "regenerated-queries-single-positive",
+      "evidenceStrength": "reported-only-retained-aggregate",
+      "candidateAMean": 0.2485,
+      "candidateBMean": 0.2153,
+      "meanGapCandidateAMinusB": 0.0333,
+      "reportedInference": "difference-reported-not-significant"
+    }
+  ],
+  "limitations": [
+    "historical single-user evidence",
+    "queries included model-generated and human-written queries",
+    "relevance labels were model-judged",
+    "candidate labels were recorded at evaluation time and do not identify immutable weights or provenance",
+    "the numeric projection does not validate private relevance labels or prove anonymization",
+    "the corrected comparison does not establish equivalence, current superiority, or a deployment reversal"
+  ]
+}
